@@ -30,3 +30,12 @@ border: none; padding: 12px 20px; border-radius: 5px; color: #fff; font-family: 
 .password_inputs span {width: 230px; background: var(--blue); padding: 10px 20px; min-height: 39px; border-radius: 5px; text-align: center;}
 
 hr.test {border: 1px solid #D5D4D8}
+
+
+
+@media screen and (max-width: 600px) {
+    .container {padding: 30px 20px;}
+    .password_generator_con {padding: 30px 20px; text-align: center;}
+    .password_generator_con p {margin-top: 15px;}
+    .password_inputs {flex-wrap: wrap;}
+}
