@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*, ::before, ::after {margin: 0; padding: 0; box-sizing: border-box;}
+
+
+:root {
+    --primary-font: "Karla", sans-serif;
+    --secondary-font: "Inter", sans-serif;
+    --green: #10B981;
+    --blue: #273549;
+    --gray: #6B7280
+}
+body {font-family: var(--primary-font);}
+
+main {width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;}
+
+.container {background: #1C1C1C; width: 100%; max-width: 700px; padding: 50px}
+
+.password_generator_con {background:#ECFDF5; padding:150px 50px;}
+.password_generator_con h2 {font-family: var(--primary-font); font-weight: 800; font-size: 40px; letter-spacing: -2px;}
+.password_generator_con span {display: block; color: var(--green);}
+.password_generator_con p {font-size: 20px; color: var(--gray); font-family: var(--secondary-font);}
+
+.password_gen_buttons {margin-top: 50px;}
+.password_gen_buttons button {background-color: #10B981; font-size: 16px; font-weight: 500;
+border: none; padding: 12px 20px; border-radius: 5px; color: #fff; font-family: var(--secondary-font); margin-bottom: 40px; cursor: pointer;}
+
+.password_inputs {display: flex; justify-content: center; column-gap: 30px; row-gap:15px;margin-top: 30px; }
+.password_inputs span {width: 230px; background: var(--blue); padding: 10px 20px; min-height: 39px; border-radius: 5px; text-align: center;}
+
+hr.test {border: 1px solid #D5D4D8}
