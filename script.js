@@ -7,21 +7,46 @@ const firstPassword = document.querySelector('.password1')
 const secondPassword = document.querySelector('.password2')
 const passwordSpan = document.querySelectorAll('.password_span')
 const textAlert = document.querySelector('.text_alert')
+const darkModeButton = document.querySelector('.dark_mode_button')
+const darkModeCircle = document.querySelector('.dark_mode_button_circle')
+const passwordInput = document.querySelector('#password_length')
 let generated = false;
+
+
+
+function lightMode() {
+    darkModeCircle.classList.toggle('light_mode')
+    document.querySelector(".password_generator_con").classList.toggle("password_generator_con_dark")
+}
+
+darkModeButton.addEventListener('click', () => {
+    lightMode()
+})
+
 
 generateButton.addEventListener("click", () => {
     firstPassword.textContent = generatePassword()
     secondPassword.textContent = generatePassword()
-    generated = true
+    console.log(passwordInput.value)
+   
 })
 
 
 function generatePassword() {
     let password = ""
+    let passwordInputValue = passwordInput.value
     
-    for(let i = 0; i < 16; i++) {
+    for(let i = 0; i < passwordInputValue; i++) {
         const randomNumber = Math.floor(Math.random() * characters.length)
-        password += characters[randomNumber]
+
+        if(passwordInputValue <=7 || passwordInputValue >= 16) {
+            console.log("Please choose password length between 8-16")
+            password = ""
+        }else {
+            password += characters[randomNumber]
+            generated = true
+        }
+
     }
 
     return password
@@ -47,8 +72,8 @@ passwordSpan.forEach(span => {
     window.getSelection().removeAllRanges();
     
     // Optional: Provide feedback to the user
-    if(generated === false) {
-        alert("Please generate password")
+    if(generated === false && passwordInput.value === "") {
+        alert("Please generate password between 8-16")
     } else {
         showTextAlert() 
         setTimeout(hideTextAlert, 2000)

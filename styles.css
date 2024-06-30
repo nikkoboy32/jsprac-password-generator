@@ -15,17 +15,21 @@ body {font-family: var(--primary-font);}
 
 main {width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;}
 
-.container {background: #1C1C1C; width: 100%; max-width: 700px; padding: 50px}
+.container {background: #1C1C1C; width: 100%; max-width: 700px; padding: 50px; position: relative;}
 
 .password_generator_con {background:#ECFDF5; padding:150px 50px;}
 .password_generator_con h2 {font-family: var(--primary-font); font-weight: 800; font-size: 40px; letter-spacing: -2px;}
 .password_generator_con span {display: block; color: var(--green);}
 .password_generator_con p {font-size: 20px; color: var(--gray); font-family: var(--secondary-font);}
 
-.password_gen_buttons {margin-top: 50px;}
-.password_gen_buttons button {background-color: #10B981; font-size: 16px; font-weight: 500;
-border: none; padding: 12px 20px; border-radius: 5px; color: #fff; font-family: var(--secondary-font); margin-bottom: 40px; cursor: pointer;}
+.password_generator_con_dark {background:#1F2937;}
+.password_generator_con_dark h2 {color:#fff}
 
+.password_gen_buttons {margin-top: 50px; position: relative;}
+.password_gen_buttons button {background-color: #10B981; font-size: 16px; font-weight: 500;
+border: none; padding: 12px 20px; border-radius: 5px; color: #fff; font-family: var(--secondary-font); margin-bottom: 70px; cursor: pointer;}
+
+.password_submit_btn {padding:2px 5px !important; font-size:14px !important;}
 .password_inputs {display: flex; justify-content: center; column-gap: 30px; row-gap:15px;margin-top: 30px; position: relative;}
 .password_inputs span {width: 230px; background: var(--blue); padding: 10px 20px; min-height: 39px; border-radius: 5px; text-align: center; cursor: pointer;}
 
@@ -34,6 +38,15 @@ hr.test {border: 1px solid #D5D4D8}
 .text_alert {position: absolute; color: rgb(216, 33, 33); top:-26px; display: none;}
 .show_text_alert {display:block;}
  
+.dark_mode_button{height: 30px; width: 80px; position: absolute; right:50px; cursor: pointer;}
+.dark_mode_button_con {background: var(--blue); width: 100%; height: 100%; border-radius: 30px; position: relative;}
+.dark_mode_button_circle {width: 30px; height: 100%; background: #10B981; border-radius: 100%; position: absolute;left:0px; transition:0.5s}
+
+.light_mode {left:50px !important; background: #10B981; transition: 0.5s;}
+
+.input_length_con {position: absolute; top:50px;}
+
+.password_label {display:block; margin-bottom: 10px; color: var(--gray);}
 
 @media screen and (max-width: 600px) {
     .container {padding: 30px 20px;}

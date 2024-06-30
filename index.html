@@ -10,6 +10,11 @@
     
     <main>
         <div class="container">
+            <div class="dark_mode_button">
+                <div class="dark_mode_button_con">
+                    <div class="dark_mode_button_circle"></div>
+                </div>
+            </div>
             <div class="password_generator_con">
                 <div class="heading">
                   <h2>Generate a <span>random password</span></h2>
@@ -17,6 +22,11 @@
                </div>
                <div class="password_gen_buttons">
                    <button class="generate_password">Generate passwords</button>
+                   <div class="input_length_con">
+                        <label for="password_length" class="password_label">Input password length:</label>
+                        <input type="number" name="password_length" id="password_length" min="8" max="16">
+                        <!-- <button class="password_submit_btn">Submit</button> -->
+                    </div>
                </div>
                <hr class="test"/>
                <div class="password_inputs">
