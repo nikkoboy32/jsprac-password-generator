@@ -36,18 +36,15 @@ function generatePassword() {
     let password = ""
     let passwordInputValue = passwordInput.value
     
-    for(let i = 0; i < passwordInputValue; i++) {
-        const randomNumber = Math.floor(Math.random() * characters.length)
-
-        if(passwordInputValue <=7 || passwordInputValue >= 16) {
-            console.log("Please choose password length between 8-16")
-            password = ""
-        }else {
-            password += characters[randomNumber]
-            generated = true
-        }
-
-    }
+        if(passwordInputValue >=8 && passwordInputValue <= 16) {
+            for(let i = 0; i < passwordInputValue; i++) {
+                const randomNumber = Math.floor(Math.random() * characters.length)
+                password += characters[randomNumber]
+                generated = true} 
+             }else {
+                alert("Please choose password length between 8-16")
+              password = ""
+           }
 
     return password
 }
@@ -72,7 +69,7 @@ passwordSpan.forEach(span => {
     window.getSelection().removeAllRanges();
     
     // Optional: Provide feedback to the user
-    if(generated === false && passwordInput.value === "") {
+    if(generated === false || passwordInput.value === "") {
         alert("Please generate password between 8-16")
     } else {
         showTextAlert() 

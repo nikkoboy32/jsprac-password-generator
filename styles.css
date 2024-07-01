@@ -53,4 +53,6 @@ hr.test {border: 1px solid #D5D4D8}
     .password_generator_con {padding: 30px 20px; text-align: center;}
     .password_generator_con p {margin-top: 15px;}
     .password_inputs {flex-wrap: wrap;}
+    .dark_mode_button {right: 20px; top: 30px;}
+    .input_length_con {left:50%; transform: translateX(-50%); width: 100%;}
 }
